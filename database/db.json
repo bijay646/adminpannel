@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Ramesh",
+      "lastName": "Lamichane",
+      "email": "ramesh@gmail.com",
+      "phone": "9800000000",
+      "password": "12345",
+      "isActive": "active",
+      "role": "user"
+    },
+    {
+      "id": 2,
+      "firstName": "Ram",
+      "lastName": "Chandra",
+      "email": "ram@gmail.com",
+      "phone": "9800000001",
+      "password": "12345",
+      "isActive": "inactive",
+      "role": "user"
+    },
+    {
+      "id": 3,
+      "firstName": "Sita",
+      "lastName": "Nepal",
+      "email": "sita@gmail.com",
+      "phone": "9800000002",
+      "password": "12345",
+      "isActive": "inactive",
+      "role": "user"
+    },
+    {
+      "id": 4,
+      "firstName": "Gita",
+      "lastName": "Khan",
+      "email": "gita@gmail.com",
+      "phone": "98000000003",
+      "password": "12345",
+      "isActive": "active",
+      "role": "user"
+    },
+    {
+      "id": 5,
+      "firstName": "Admin",
+      "lastName": "Admin",
+      "email": "admin@gmail.com",
+      "phone": "9800000004",
+      "password": "12345",
+      "isActive": "active",
+      "role": "admin"
+    },
+    {
+      "id": "6",
+      "firstName": "ankit",
+      "lastName": "bahn",
+      "email": "ankit@gmail.com",
+      "phone": "9876676655",
+      "password": "12345",
+      "isActive": "active",
+      "role": "user"
+    }
+  ]
+}

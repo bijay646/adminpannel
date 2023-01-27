@@ -1,0 +1,19 @@
+.myLogin {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     text-align: start;
+     background-color: cadetblue;
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+     width: 30%;
+     margin: 5rem auto;
+     padding: 2rem;
+     border-radius: .5rem;
+}
+
+.myAlert {
+     display: flex;
+     justify-content: center;
+     text-align: start;
+     color: red;
+}
