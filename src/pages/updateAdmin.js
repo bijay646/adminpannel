@@ -2,9 +2,12 @@ import React from 'react';
 import { Button, Form, Input } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import api from "../api/user";
+import { useSelector } from 'react-redux';
 
-const UserAdd = () => {
+const UpdateAdmin = () => {
      const navigate = useNavigate();
+     const users = useSelector((state) => state.users.users);
+     const adminData = users && users.filter(item => item.role === "admin")[0];
 
      const onFinish = async (values) => {
           console.log(values)
@@ -18,14 +21,20 @@ const UserAdd = () => {
                isActive: values.isActive,
                role: values.role
           }
-          await api.post("/users", newItem);
+          await api.put('users/' + values.id, newItem)
           navigate("/admin")
      };
      const onFinishFailed = (errorInfo) => {
           console.log('Failed:', errorInfo);
      };
+
+     const goBack = () => {
+          navigate("/admin")
+     }
+
      return (
           <>
+               <Button type="primary" style={{ textAlign: "center", marginLeft: "35rem", marginTop: "2rem" }} onClick={goBack}>GO Back</Button>
                <div className="myLogin">
 
                     <Form
@@ -39,20 +48,7 @@ const UserAdd = () => {
                          style={{
                               maxWidth: 600,
                          }}
-                         // initialValues={{
-                         //      remember: true,
-                         // }}
-
-                         initialValues={{
-                              id: 'initial id',
-                              firstName: 'initial first name',
-                              lastName: 'initial last name',
-                              email: 'initial email',
-                              phone: 'initial phone',
-                              password: 'initial password',
-                              isActive: 'initial isActive',
-                              role: 'initial role'
-                            }}
+                         initialValues={adminData}
                          onFinish={onFinish}
                          onFinishFailed={onFinishFailed}
                          autoComplete="off"
@@ -68,7 +64,7 @@ const UserAdd = () => {
                                    },
                               ]}
                          >
-                              <Input />
+                              <Input disabled/>
                          </Form.Item>
 
                          <Form.Item
@@ -107,7 +103,7 @@ const UserAdd = () => {
                                    },
                               ]}
                          >
-                              <Input />
+                              <Input disabled/>
                          </Form.Item>
 
                          <Form.Item
@@ -159,7 +155,7 @@ const UserAdd = () => {
                                    },
                               ]}
                          >
-                              <Input />
+                              <Input disabled/>
                          </Form.Item>
 
                          <Form.Item
@@ -178,4 +174,4 @@ const UserAdd = () => {
      )
 }
 
-export default UserAdd
+export default UpdateAdmin;

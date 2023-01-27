@@ -44,7 +44,7 @@ const columns = [
 ];
 
 const handleUpdate = async (record) => {
-  console.log(record)
+
   const newItem = {
     id: record.id,
     firstName: record.firstName,
@@ -83,13 +83,18 @@ const AdminDashboard = () => {
     navigate("/useradd")
   }
 
+  const updateAdmin = () => {
+    navigate("/adminupdate")
+  }
+
   const paginatedData = userData && userData.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
   const adminData = users && users.filter(item => item.role === "admin")[0]
 
   return (
     <div style={{ padding: "3rem", width: "70%", margin: "3rem auto" }}>
-      <div style={{color:"green",fontWeight:"bold"}}>
+      <Button type="primary" style={{ marginBottom: "2rem", backgroundColor: "orangered" }} onClick={updateAdmin}>Update Admin</Button>
+      <div style={{ color: "green", fontWeight: "bold" }}>
         {
           <p>Name: {adminData && `${adminData.firstName}  ${adminData.lastName}`}</p>
         }

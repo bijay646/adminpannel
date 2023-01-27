@@ -27,7 +27,7 @@
       "email": "sita@gmail.com",
       "phone": "9800000002",
       "password": "12345",
-      "isActive": "inactive",
+      "isActive": "active",
       "role": "user"
     },
     {
@@ -43,7 +43,7 @@
     {
       "id": 5,
       "firstName": "Admin",
-      "lastName": "Admin",
+      "lastName": "super",
       "email": "admin@gmail.com",
       "phone": "9800000004",
       "password": "12345",
@@ -58,6 +58,16 @@
       "phone": "9876676655",
       "password": "12345",
       "isActive": "active",
+      "role": "user"
+    },
+    {
+      "id": "7",
+      "firstName": "salman",
+      "lastName": "thapa",
+      "email": "salman@gmail.com",
+      "phone": "987656864",
+      "password": "12345",
+      "isActive": "inactive",
       "role": "user"
     }
   ]

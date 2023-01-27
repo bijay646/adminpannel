@@ -16,12 +16,11 @@ const Login = () => {
      }, []);
 
      const users = useSelector((state) => state.users.users);
-     console.log(users)
-
 
      const onFinish = (values) => {
           users.find(user => {
                if (user.email === values.email && user.password === values.password) {
+
                     return navigate('/admin');
                } else {
                     return setError(true)
@@ -34,7 +33,7 @@ const Login = () => {
 
      return (
           <>
-               <div className="myLogin">
+               <div className="myLogin" style={{ marginTop: "5rem" }}>
                     {error &&
                          <p className='myAlert'>User Credentials doesn't match</p>
                     }
@@ -89,8 +88,9 @@ const Login = () => {
                                    offset: 8,
                                    span: 16,
                               }}
+
                          >
-                              <Checkbox >Remember me</Checkbox>
+                              <Checkbox>Remember me</Checkbox>
                          </Form.Item>
 
                          <Form.Item

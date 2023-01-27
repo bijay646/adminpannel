@@ -3,7 +3,9 @@ const PAGES = {
 
      LOGIN: "/",
 
-     USERADD: "/useradd"
+     USERADD: "/useradd",
+
+     ADMINUPDATE: "/adminupdate"
 };
 
 export default PAGES;

@@ -6,6 +6,7 @@ import AdminDashboard from "./pages/AdminDashboard";
 import Login from "./pages/Login";
 import PAGES from "./constants/pageRoutes";
 import UserAdd from "./pages/UserAdd";
+import UpdateAdmin from "./pages/UpdateAdmin";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path={PAGES.HOME} element={<AdminDashboard />} />
           <Route path={PAGES.LOGIN} element={<Login />} />
           <Route path={PAGES.USERADD} element={<UserAdd />} />
+          <Route path={PAGES.ADMINUPDATE} element={<UpdateAdmin />} />
         </Routes>
       </Provider>
     </Router>
